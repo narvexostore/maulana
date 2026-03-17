@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NARVEXO STORE | Premium Streetwear</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Poppins:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        :root { 
+            --primary: #ff5722; 
+            --dark: #0a0a0a; 
+            --white: #ffffff; 
+            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        /* --- Global Reset --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background: var(--white); 
+            color: var(--dark); 
+            overflow-x: hidden; 
+        }
+
+        /* --- NAVIGATION --- */
+        nav { 
+            display: flex; 
+            align-items: center; 
+            position: fixed; 
+            width: 100%; 
+            height: 110px; 
+            padding: 0 5%; 
+            top: 0; 
+            z-index: 1000; 
+            background: rgba(255, 255, 255, 0.95); 
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(0,0,0,0.05); 
+            transition: var(--transition);
+        }
+
+        .logo-container { flex: 1; display: flex; align-items: center; }
+        .logo-img { 
+            height: 80px; 
+            width: auto;
+            mix-blend-mode: multiply; 
+            transition: var(--transition);
+        }
+
+        .nav-center { flex: 2; display: flex; justify-content: center; }
+        .nav-links { display: flex; gap: 40px; list-style: none; }
+        .nav-links a { 
+            text-decoration: none; 
+            color: var(--dark); 
+            font-weight: 800; 
+            font-size: 14px; 
+            letter-spacing: 2px; 
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+        .nav-links a:hover, .nav-links a.active { color: var(--primary); }
+
+        .nav-right { flex: 1; display: flex; justify-content: flex-end; font-size: 1.2rem; }
+
+        /* --- HERO SECTION --- */
+        .hero { 
+            height: 100vh; 
+            position: relative;
+            display: flex; 
+            align-items: center; 
+            justify-content: center;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=1600');
+            background-size: cover;
+            background-position: center;
+            z-index: 1;
+        }
+
+        .hero-content { 
+            position: relative; 
+            z-index: 2; 
+            text-align: center; 
+            color: white; 
+            max-width: 900px;
+            padding: 0 20px;
+        }
+
+        .hero-content p {
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 6px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .hero-content h1 { 
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(2.5rem, 6vw, 4.5rem); 
+            line-height: 1.1;
+            text-transform: uppercase; 
+            letter-spacing: -2px;
+            margin-bottom: 35px;
+        }
+
+        .btn-hero { 
+            padding: 18px 45px; 
+            background: var(--white); 
+            color: var(--dark); 
+            text-decoration: none; 
+            font-weight: 800; 
+            font-size: 13px;
+            letter-spacing: 2px;
+            display: inline-block; 
+            transition: var(--transition);
+            border-radius: 2px;
+        }
+
+        .btn-hero:hover {
+            background: var(--primary);
+            color: var(--white);
+            transform: translateY(-5px);
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 992px) {
+            .nav-links { gap: 20px; }
+            .hero-content h1 { font-size: 3rem; }
+        }
+
+        @media (max-width: 768px) {
+            nav { height: 80px; }
+            .nav-center { display: none; }
+            .logo-img { height: 50px; }
+            .hero-content h1 { font-size: 2.2rem; }
+            .hero-content p { font-size: 12px; letter-spacing: 4px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="narvexo.jpeg" alt="NARVEXO" class="logo-img">
+            </a>
+        </div>
+        
+        <div class="nav-center">
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">HOME</a></li>
+                <li><a href="shop.html">SHOP</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
+
+        <div class="nav-right">
+            <a href="#" style="color: inherit;"><i class="fa-solid fa-bag-shopping"></i></a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <p data-aos="fade-down" data-aos-delay="200">EST. 2026</p>
+            <h1 data-aos="zoom-out" data-aos-delay="400">
+                WELCOME TO NARVEXO<br>
+                <span style="font-weight: 300; opacity: 0.9;">MODERN STREETWEAR</span>
+            </h1>
+            <a href="shop.html" class="btn-hero" data-aos="fade-up" data-aos-delay="600">
+                EXPLORE COLLECTION
+            </a>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Inisialisasi Animasi AOS
+        AOS.init({ 
+            duration: 1000, 
+            once: true,
+            offset: 0
+        });
+        
+        // Animasi Scroll Navbar
+        window.addEventListener('scroll', function() {
+            const nav = document.getElementById('navbar');
+            const logo = document.querySelector('.logo-img');
+            
+            if (window.scrollY > 50) {
+                nav.style.height = "85px";
+                nav.style.background = "rgba(255, 255, 255, 1)";
+                logo.style.height = "65px";
+            } else {
+                nav.style.height = "110px";
+                nav.style.background = "rgba(255, 255, 255, 0.95)";
+                logo.style.height = "80px";
+            }
+        });
+    </script>
+</body>
+</html>
